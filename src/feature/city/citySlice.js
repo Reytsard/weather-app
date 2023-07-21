@@ -27,7 +27,6 @@ const citySlice = createSlice({
       })
       .addCase(fetchData.rejected, (state, action) => {
         state.isLoading = false;
-        console.log(action.payload);
       });
   },
 });

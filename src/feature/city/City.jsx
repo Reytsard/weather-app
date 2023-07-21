@@ -18,7 +18,6 @@ function City() {
   const getWeatherCard = useCallback(
     (e, v) => {
       e.preventDefault();
-      console.log("url", v.url);
       dispatch(fetchCityWeather(v.url));
       document.querySelector("#searchInput").textContent = "";
     },

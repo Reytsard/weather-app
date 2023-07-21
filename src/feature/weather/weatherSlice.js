@@ -8,16 +8,11 @@ const weatherSlice = createSlice({
     status: "idle",
     error: null,
   },
-  reducers: {
-    addWeather: (state, action) => {
-      console.log(state.items.length);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchCityWeather.pending, (state) => {
         state.status = "loading";
-        console.log(state.status);
       })
       .addCase(fetchCityWeather.fulfilled, (state, action) => {
         state.status = "succeeded";
@@ -28,11 +23,9 @@ const weatherSlice = createSlice({
         );
         if (index === -1) {
           state.items.push(action.payload);
-        } else {
         }
       })
       .addCase(fetchCityWeather.rejected, (state, action) => {
-        state.status = "failed";
         state.error = action.error.message;
       });
   },
