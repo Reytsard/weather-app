@@ -2,7 +2,7 @@
   "name": "redux-assignment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://reytsard.github.io/weather-app",
+  "homepage": "https://reytsard.github.io/weather-app",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",

@@ -38,7 +38,7 @@ export default citySlice.reducer;
 
 export const fetchData = createAsyncThunk("data/fetch", async (location) => {
   const url =
-    "http://api.weatherapi.com/v1/search.json?key=a05c7c2a2aae40feb82131443230105&q=" +
+    "https://api.weatherapi.com/v1/search.json?key=a05c7c2a2aae40feb82131443230105&q=" +
     location;
   return (await axios.get(url)).data;
 });
